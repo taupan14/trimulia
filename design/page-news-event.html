@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link rel="preload" href="./assets/fonts/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+<style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 9999;
+        background-color: #fff;
+    }
+</style>
+
+  <script type="module" crossorigin src="./assets/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/main.css">
+</head>
+<body>
+
+<div id="app">
+
+<header id="section-header" class="fixed top-0 inset-x-0 z-50">
+    <nav id="nav-header" class="relative isolate py-4 border-t-4 border-primary-600 bg-dark-50 z-10 | lg:py-6">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="flex items-center justify-between">
+                <a href="./" class="relative inline-flex items-center gap-3 z-10">
+                    <div class="relative w-10 aspect-square shrink-0">
+                        <img src="./assets/images/logo/logo-icon-trimulia-default.svg" alt="" class="absolute inset-0 object-contain transition-opacity duration-700 ease-custom[.is-hover-menu_&]:opacity-0">
+                        <img src="./assets/images/logo/logo-icon-trimulia-white.svg" alt="" class="absolute inset-0 object-contain opacity-0 transition-opacity duration-700 ease-custom [.is-hover-menu_&]:opacity-100">
+                    </div>
+                    <div class="inline-flex flex-col">
+                        <h5 class="font-title text-xs tracking-normal !leading-none font-medium uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white">Sekolah Kristen</h5>
+                        <h5 class="font-title text-xl tracking-normal !leading-none font-medium uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white | lg:text-2xl">Trimulia</h5>
+                    </div>
+                </a>
+                <div class="absolute inset-0 place-items-center hidden | lg:grid">
+                    <ul class="flex items-center flex-nowrap whitespace-nowrap gap-12 [.is-show-language_&]:hidden">
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                About Us
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-600 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-warning-400">About Us</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-our-network.html">Our Network</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-structure.html">Structure Organization</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Admission
+                            </a>
+                        </li>
+                        <!-- <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Admission
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-600 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-warning-400">Admission</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-process.html">Registration Process</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-info.html">Test Information</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-guide.html">Registration Guide</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Teaching & Learning
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-600 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-warning-400">Teaching & Learning</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-academic.html">Academic Overview</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-kindergarten.html">Kindergarten</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-primary-school.html">Primary School</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-junior-school.html">Junior School</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-senior-school.html">Senior School</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-elective.html">Elective Class</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="page-news-event.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                News & Event
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="hidden items-center flex-nowrap whitespace-nowrap gap-12 [.is-show-language_&]:flex">
+                        <li class="inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white] is-active" data-hover-effect>
+                                English
+                            </a>
+                        </li>
+                        <li class="inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Bahasa
+                            </a>
+                        </li>
+                        <li class="inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Mandarin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative hidden items-center gap-4 z-10 | lg:flex">
+                    <button type="button" id="btn-language" class="btn btn-icon">
+                        <div class="[.is-show-language_&]:hidden">
+                            En
+                        </div>
+                        <svg class="icon icon-stroke !hidden [.is-show-language_&]:!inline-flex" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.00049 4.99988L19.0005 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.0005 4.99988L5.00049 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <a href="page-contact-us.html" class="btn btn-primary [.is-hover-menu_&]:btn-white" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-left icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative flex z-10 | lg:hidden">
+                    <button type="button" id="mobile-menu-toggle" class="btn btn-sm btn-primary">
+                        <div class="inline-flex flex-col overflow-clip h-5">
+                            <span class="text-xs leading-5 shrink-0 transition-transform duration-700 ease-custom [.is-active-menu_&]:-translate-y-full">Menu</span>
+                            <span class="text-xs leading-5 shrink-0 transition-transform duration-700 ease-custom [.is-active-menu_&]:-translate-y-full">Close</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="backdrop" class="absolute top-0 left-0 w-screen h-dvh backdrop-blur-md bg-primary-950/30 -z-[2] pointer-events-none"></div>
+    </nav>
+
+    <nav id="mobile-menu" class="fixed top-0 inset-x-0 bg-dark-50">
+        <div class="flex flex-col h-dvh pt-[var(--space-header)]">
+            <div class="h-full flex flex-col max-w-screen-sm mx-auto px-3 shrink-0 overflow-auto | lg:px-12 | 2xl:px-0" data-lenis-prevent>
+                <div class="py-8 shrink-0">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-600 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">Navigation</h6>
+                    </div>
+                    <ul class="accordion flex flex-col gap-4 [counter-reset:numeric]" data-parent>
+                        <li class="accordion-item overflow-clip [counter-increment:numeric]">
+                            <a href="javascript:;" class="relative inline-flex gap-4" data-target="accordion-1">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">About Us</h1>
+                            </a>
+                            <div id="accordion-1" class="accordion-content overflow-clip" aria-hidden="true">
+                                <ul class="flex flex-col gap-2 py-4 pl-8">
+                                    <li><a href="page-about-us.html" class="text-lg font-medium">About Us</a></li>
+                                    <li><a href="page-about-our-network.html" class="text-lg font-medium">Our Network</a></li>
+                                    <li><a href="page-about-gallery.html" class="text-lg font-medium">Gallery</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="overflow-clip [counter-increment:numeric]">
+                            <a href="page-admission.html" class="relative inline-flex gap-4">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">Admission</h1>
+                            </a>
+                        </li>
+                        <li class="accordion-item overflow-clip [counter-increment:numeric]">
+                            <a href="javascript:;" class="relative inline-flex gap-4" data-target="accordion-2">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">Teaching & Learning</h1>
+                            </a>
+                            <div id="accordion-2" class="accordion-content overflow-clip" aria-hidden="true">
+                                <ul class="flex flex-col gap-2 py-4 pl-8">
+                                    <li><a href="page-teaching-academic.html" class="text-lg font-medium">Academic Overview</a></li>
+                                    <li><a href="page-teaching-kindergarten.html" class="text-lg font-medium">Kindergarten</a></li>
+                                    <li><a href="page-teaching-primary-school.html" class="text-lg font-medium">Primary School</a></li>
+                                    <li><a href="page-teaching-junior-school.html" class="text-lg font-medium">Junior School</a></li>
+                                    <li><a href="page-teaching-senior-school.html" class="text-lg font-medium">Senior School</a></li>
+                                    <li><a href="page-teaching-elective.html" class="text-lg font-medium">Elective Class</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="overflow-clip [counter-increment:numeric]">
+                            <a href="page-news-event.html" class="relative inline-flex gap-4">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">News & Event</h1>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-3 shrink-0 mt-auto">
+                    <div class="flex items-center justify-between">
+                        <h6 class="uppercase leading-none tracking-wide text-dark-400">Change Language</h6>
+                        <div class="flex items-center gap-1">
+                            <a href="#!" class="btn btn-icon [&.is-active]:btn-primary is-active">EN</a>
+                            <a href="#!" class="btn btn-icon">ID</a>
+                            <a href="#!" class="btn btn-icon">CN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-3 shrink-0">
+                    <a href="page-contact-us.html" class="w-full btn btn-primary is-active" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="py-3 shrink-0">
+                    <h6 class="uppercase leading-none tracking-wide text-dark-400">Copyright © 2024</h6>
+                    <h6 class="uppercase leading-none tracking-wide text-dark-400">Bintang Mulia School</h6>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<section id="page-header" class="relative pt-[var(--space-header)]">
+    <div class="relative pt-16 pb-8 | lg:pt-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-x-16">
+                <div class="grid-item col-span-full text-center | lg:col-span-8 lg:col-start-3">
+                    <div class="inline-flex items-center gap-3 mb-8" data-fade-in>
+                        <div class="w-1.5 aspect-square bg-primary-600 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">News & Events</h6>
+                    </div>
+                    <h2 class="font-title font-medium text-balance leading-none" data-split-text>The latest from our Bintang Mulia School<span class="text-primary-600">.</span></h2>
+                </div>
+            </div>
+        </div>
+<div class="absolute inset-x-0 top-0 -bottom-20 bg-[linear-gradient(90deg,theme('colors.dark.950/0.15')_1px,transparent_0),linear-gradient(180deg,theme('colors.dark.950/0.15')_1px,transparent_0)] bg-[length:calc(100vw/8)_calc(100vw/8)] [mask-image:radial-gradient(farthest-corner,black,rgba(0,0,0,.5),transparent_80%)] -z-[1] | lg:bg-[length:calc(100vw/20)_calc(100vw/20)]"></div>
+    </div>
+</section>
+
+<section id="page-content">
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-4 gap-y-6 | lg:grid-cols-12 lg:gap-y-8">
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img05.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <article class="flex flex-col group">
+                        <figure class="relative aspect-square rounded-3xl overflow-clip" data-image-reveal>
+                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                                <div class="flex justify-end">
+                                    <div class="inline-flex">
+                                        <div class="btn-circle [--bg-circle:theme('colors.primary.600')] [--text-circle:white]">
+                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </figure>
+                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                            <ul class="flex items-center gap-4 justify-between">
+                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                            </ul>
+                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            <div class="flex mt-8 | lg:mt-16 lg:justify-center">
+                <div class="flex grow items-center gap-4 bg-dark-200 rounded-full p-1 | lg:grow-0">
+                    <a href="#!" class="btn btn-sm btn-icon btn-dark" data-hover-effect disabled>
+                        <svg class="icon icon-stroke icon-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 6L9 12L15 18" stroke="#141B34" stroke-width="1.5" stroke-miterlimit="16"/>
+                        </svg>
+                    </a>
+                    <h6 class="uppercase leading-none tracking-wide grow text-center | lg:hidden">Page 1 of 12</h6>
+                    <ul class="hidden items-center gap-1 | lg:flex">
+                        <li class="inline-flex">
+                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary is-active">
+                                <span class="text-xs font-bold">1</span>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                                <span class="text-xs font-bold">2</span>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                                <span class="text-xs font-bold">3</span>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn btn-sm btn-icon btn-transparent" disabled>
+                                <span class="text-xs font-bold">...</span>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                                <span class="text-xs font-bold">11</span>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                                <span class="text-xs font-bold">12</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#!" class="btn btn-sm btn-icon btn-dark" data-hover-effect>
+                        <svg class="icon icon-stroke icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.00005 6L15 12L9 18" stroke="#141B34" stroke-width="1.5" stroke-miterlimit="16"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</main>
+
+<footer id="section-footer" class="px-1.5 pb-1.5 | lg:px-3 lg:pb-3">
+    <section id="footer-register" class="relative pb-16 pt-8 | lg:pb-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="relative | lg:pt-24">
+                <div class="relative isolate bg-warning-500 rounded-3xl overflow-clip px-8 py-12 | lg:px-16 lg:py-20 | 2xl:px-20 2xl:py-28">
+                    <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                        <div class="grid-item col-span-full text-center | lg:col-span-8 lg:text-start">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-950 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide text-white">Be a part of our lifelong</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none text-white after:content-['.'] after:text-primary-950">Transformative Learning Community Today</h2>
+                        </div>
+                        <div class="grid-item col-span-full text-center | lg:col-span-6 lg:row-start-2 lg:text-start">
+                            <a href="page-online-registration.html" class="btn btn-dark" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 -z-[1]">
+                        <div class="absolute bottom-0 right-0 aspect-square rounded-full border border-white/50 w-[calc(22rem+22vw)] translate-x-1/4 translate-y-1/2"></div>
+                        <div class="absolute top-0 left-0 aspect-square rounded-full bg-warning-400/50 w-[calc(20rem+20vw)] -translate-x-1/2 -translate-y-1/2"></div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 left-[60%] pointer-events-none hidden | lg:block">
+                    <figure class="size-full">
+                        <img src="./assets/images/online-registration.webp" alt="" class="size-full object-contain">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-1/2 bottom-0 bg-primary-950 rounded-t-3xl -z-[1]"></div>
+    </section>
+    <section id="footer-top" class="pb-20 pt-8 bg-primary-950 | lg:pb-24">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-16 | lg:grid-cols-12">
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <a href="./" class="inline-flex items-center gap-3">
+                        <img src="./assets/images/logo/logo-icon-trimulia-default.svg" alt="" class="size-10 object-contain shrink-0">
+                        <div class="inline-flex flex-col">
+                            <h5 class="font-title text-xs tracking-normal !leading-none font-medium uppercase text-white">Sekolah Kristen</h5>
+                            <h5 class="font-title text-xl tracking-normal !leading-none font-medium uppercase text-white | lg:text-2xl">Trimulia</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <!-- <h5 class="font-title font-medium text-balance text-white after:content-['.'] after:text-primary-600 mb-4">About Us</h5> -->
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">About Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-our-network.html">Our Network</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-structure.html">Structure Organization</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-news-event.html">News & Event</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Teaching & Learning</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-academic.html">Academic Overview</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-kindergarten.html">Kindergarten</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-primary-school.html">Primary School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-junior-school.html">Junior School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-senior-school.html">Senior School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-elective.html">Elective Class</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Head Office</h6>
+                    <address class="not-italic text-white/60 text-balance mb-4">
+                        Jalan Mentawai No. 201 Taman Imam Bonjol, Lippo Village Tangerang, 15139, Indonesia
+                    </address>
+                    <a class="link text-white" href="#!">Get Directions</a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Contact Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">info@bintangmulia.com</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">+62 822 1234 5678</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Follow Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Facebook</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Instagram</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer-bottom" class="pb-8 bg-primary-950 rounded-b-3xl overflow-clip">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="splide group/slide pointer-events-none mb-8 | lg:mb-16" data-slide-footer>
+                <div class="splide__track overflow-visible">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-warning-500 | lg:[--font-size:86] whitespace-nowrap">Sekolah Kristen Trimulia</h1>
+                        </div>
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-warning-500 | lg:[--font-size:86] whitespace-nowrap">Sekolah Kristen Trimulia</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6 id="footer-copyright" class="uppercase leading-none tracking-wide text-white/60 text-center">Copyright © 2024 Trimulia. All Rights Reserved</h6>
+        </div>
+    </section>
+</footer>
+
+<!-- <div id="modal-adds" class="fixed top-0 inset-x-0 z-[999] hidden" data-modal data-auto-modal>
+    <div class="relative w-full h-dvh flex flex-col overflow-auto pointer-events-none" data-lenis-prevent>
+        <div class="py-12 shrink-0 my-auto">
+            <div class="max-w-screen-2xl mx-auto px-2 lg:px-8 xl:px-8 2xl:px-0">
+                <figure class="relative rounded-lg overflow-clip pointer-events-auto max-w-screen-sm mx-auto" data-modal-content>
+                    <div class="absolute top-0 right-0 p-1">
+                        <button type="button" class="btn btn-icon btn-sm btn-dark" data-hover-effect data-modal-hide>
+                            <svg class="icon icon-stroke" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.0002 4.99994L5.00021 18.9999M5.00021 4.99994L19.0002 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="#!">
+                        <img src="./assets/images/thumbnails/announcement.webp" loading="eager" alt="" class="w-full object-cover">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="floating-btn" class="fixed bottom-0 right-0 z-40 p-1.5 | lg:p-6">
+    <a href="https://psb.bintangmulia.sch.id/" target="_blank" class="btn btn-icon btn-lg btn-warning" data-hover-effect>
+        <svg class="icon icon-fill icon-up !text-3xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.4" d="M20.5 8.75C20.9142 8.75 21.25 9.08579 21.25 9.5V16.3564C21.3341 16.5459 21.4438 16.7511 21.5773 17.0011L21.5774 17.0011C21.6659 17.1667 21.7648 17.3519 21.8739 17.5653C22.1618 18.1288 22.4728 18.8095 22.6583 19.5901C22.7817 20.1094 22.8557 20.7964 22.3665 21.287C22.1374 21.5168 21.8549 21.6247 21.6061 21.6799C21.3581 21.7349 21.086 21.75 20.8155 21.75H20.1846C19.914 21.75 19.6419 21.7349 19.3939 21.6799C19.1451 21.6247 18.8626 21.5168 18.6335 21.287C18.1443 20.7964 18.2184 20.1094 18.3417 19.5901C18.5272 18.8095 18.8382 18.1288 19.1262 17.5653C19.2352 17.352 19.3341 17.1667 19.4226 17.0012L19.4227 17.0011L19.4227 17.001C19.5563 16.7511 19.6659 16.5459 19.75 16.3564V9.5C19.75 9.08579 20.0858 8.75 20.5 8.75Z" fill="#141B34"/>
+            <path opacity="0.4" d="M15.1144 14.5285C14.5599 14.7251 14.0193 14.8963 13.5298 15.021C13.0795 15.1357 12.5257 15.2504 12.0009 15.2504C11.4761 15.2504 10.9223 15.1357 10.472 15.021C9.98249 14.8963 9.44193 14.7251 8.88747 14.5285C8.01475 14.219 7.04728 13.8249 6.09414 13.3936C5.75043 13.238 5.35907 13.4974 5.3755 13.8743L5.49708 16.663C5.50321 16.8036 5.51961 16.9872 5.5784 17.1813C5.71567 17.6345 5.98296 18.0933 6.43112 18.4145C7.10092 18.8944 7.98982 19.2227 8.93433 19.4335C9.88858 19.6465 10.9493 19.7504 12.0009 19.7504C13.0525 19.7504 14.1133 19.6465 15.0675 19.4335C16.012 19.2227 16.9009 18.8944 17.5707 18.4145C18.0189 18.0933 18.2862 17.6345 18.4234 17.1813C18.4822 16.9872 18.4986 16.8036 18.5048 16.663L18.6263 13.8743C18.6428 13.4974 18.2514 13.238 17.9077 13.3936C16.9546 13.8249 15.9871 14.219 15.1144 14.5285Z" fill="#141B34"/>
+            <path d="M10.8414 2.43303C11.2599 2.32641 11.6671 2.25 12 2.25C12.3329 2.25 12.7401 2.32641 13.1586 2.43303C13.5904 2.54303 14.0852 2.69885 14.6121 2.88569C15.6665 3.25958 16.8817 3.76934 18.0337 4.32021C19.1824 4.86949 20.2909 5.47047 21.1227 6.03058C21.5359 6.30877 21.9063 6.59377 22.1819 6.87321C22.3198 7.01303 22.4517 7.16908 22.5529 7.33906C22.6512 7.50418 22.75 7.73169 22.75 8C22.75 8.26832 22.6512 8.49582 22.5529 8.66094C22.4517 8.83092 22.3198 8.98697 22.1819 9.12679C21.9063 9.40623 21.5359 9.69123 21.1227 9.96942C20.2909 10.5295 19.1824 11.1305 18.0337 11.6798C16.8817 12.2307 15.6665 12.7404 14.6121 13.1143C14.0852 13.3012 13.5904 13.457 13.1586 13.567C12.7401 13.6736 12.3329 13.75 12 13.75C11.6671 13.75 11.2599 13.6736 10.8414 13.567C10.4096 13.457 9.91478 13.3012 9.38788 13.1143C8.33348 12.7404 7.11825 12.2307 5.96626 11.6798C4.81761 11.1305 3.70909 10.5295 2.87728 9.96942C2.46413 9.69123 2.09374 9.40623 1.81808 9.12679C1.68016 8.98697 1.54826 8.83092 1.44706 8.66094C1.34876 8.49582 1.25 8.26832 1.25 8C1.25 7.73169 1.34876 7.50418 1.44706 7.33906C1.54826 7.16908 1.68016 7.01303 1.81808 6.87321C2.09374 6.59377 2.46413 6.30877 2.87728 6.03058C3.70909 5.47047 4.81761 4.86949 5.96626 4.32021C7.11825 3.76934 8.33348 3.25958 9.38788 2.88569C9.91478 2.69885 10.4096 2.54303 10.8414 2.43303Z" fill="#141B34"/>
+        </svg>
+    </a>
+</div>
+
+<div id="preloader"></div>
+
+</div><!--app-->
+
+
+</body>
+</html>

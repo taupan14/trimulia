@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link rel="preload" href="./assets/fonts/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+<style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 9999;
+        background-color: #fff;
+    }
+</style>
+
+  <script type="module" crossorigin src="./assets/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/main.css">
+</head>
+<body>
+
+<div id="app">
+
+<header id="section-header" class="fixed top-0 inset-x-0 z-50">
+    <nav id="nav-header" class="relative isolate py-4 border-t-4 border-primary-600 bg-dark-50 z-10 | lg:py-6">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="flex items-center justify-between">
+                <a href="./" class="relative inline-flex items-center gap-3 z-10">
+                    <div class="relative w-10 aspect-square shrink-0">
+                        <img src="./assets/images/logo/logo-icon-trimulia-default.svg" alt="" class="absolute inset-0 object-contain transition-opacity duration-700 ease-custom[.is-hover-menu_&]:opacity-0">
+                        <img src="./assets/images/logo/logo-icon-trimulia-white.svg" alt="" class="absolute inset-0 object-contain opacity-0 transition-opacity duration-700 ease-custom [.is-hover-menu_&]:opacity-100">
+                    </div>
+                    <div class="inline-flex flex-col">
+                        <h5 class="font-title text-xs tracking-normal !leading-none font-medium uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white">Sekolah Kristen</h5>
+                        <h5 class="font-title text-xl tracking-normal !leading-none font-medium uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white | lg:text-2xl">Trimulia</h5>
+                    </div>
+                </a>
+                <div class="absolute inset-0 place-items-center hidden | lg:grid">
+                    <ul class="flex items-center flex-nowrap whitespace-nowrap gap-12 [.is-show-language_&]:hidden">
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                About Us
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-600 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-warning-400">About Us</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-our-network.html">Our Network</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-structure.html">Structure Organization</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Admission
+                            </a>
+                        </li>
+                        <!-- <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Admission
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-600 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-warning-400">Admission</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-process.html">Registration Process</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-info.html">Test Information</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-guide.html">Registration Guide</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Teaching & Learning
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-600 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-warning-400">Teaching & Learning</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-academic.html">Academic Overview</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-kindergarten.html">Kindergarten</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-primary-school.html">Primary School</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-junior-school.html">Junior School</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-senior-school.html">Senior School</a></li>
+                                                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-elective.html">Elective Class</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="page-news-event.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                News & Event
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="hidden items-center flex-nowrap whitespace-nowrap gap-12 [.is-show-language_&]:flex">
+                        <li class="inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white] is-active" data-hover-effect>
+                                English
+                            </a>
+                        </li>
+                        <li class="inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Bahasa
+                            </a>
+                        </li>
+                        <li class="inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Mandarin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative hidden items-center gap-4 z-10 | lg:flex">
+                    <button type="button" id="btn-language" class="btn btn-icon">
+                        <div class="[.is-show-language_&]:hidden">
+                            En
+                        </div>
+                        <svg class="icon icon-stroke !hidden [.is-show-language_&]:!inline-flex" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.00049 4.99988L19.0005 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.0005 4.99988L5.00049 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <a href="page-contact-us.html" class="btn btn-primary [.is-hover-menu_&]:btn-white" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-left icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative flex z-10 | lg:hidden">
+                    <button type="button" id="mobile-menu-toggle" class="btn btn-sm btn-primary">
+                        <div class="inline-flex flex-col overflow-clip h-5">
+                            <span class="text-xs leading-5 shrink-0 transition-transform duration-700 ease-custom [.is-active-menu_&]:-translate-y-full">Menu</span>
+                            <span class="text-xs leading-5 shrink-0 transition-transform duration-700 ease-custom [.is-active-menu_&]:-translate-y-full">Close</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="backdrop" class="absolute top-0 left-0 w-screen h-dvh backdrop-blur-md bg-primary-950/30 -z-[2] pointer-events-none"></div>
+    </nav>
+
+    <nav id="mobile-menu" class="fixed top-0 inset-x-0 bg-dark-50">
+        <div class="flex flex-col h-dvh pt-[var(--space-header)]">
+            <div class="h-full flex flex-col max-w-screen-sm mx-auto px-3 shrink-0 overflow-auto | lg:px-12 | 2xl:px-0" data-lenis-prevent>
+                <div class="py-8 shrink-0">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-600 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">Navigation</h6>
+                    </div>
+                    <ul class="accordion flex flex-col gap-4 [counter-reset:numeric]" data-parent>
+                        <li class="accordion-item overflow-clip [counter-increment:numeric]">
+                            <a href="javascript:;" class="relative inline-flex gap-4" data-target="accordion-1">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">About Us</h1>
+                            </a>
+                            <div id="accordion-1" class="accordion-content overflow-clip" aria-hidden="true">
+                                <ul class="flex flex-col gap-2 py-4 pl-8">
+                                    <li><a href="page-about-us.html" class="text-lg font-medium">About Us</a></li>
+                                    <li><a href="page-about-our-network.html" class="text-lg font-medium">Our Network</a></li>
+                                    <li><a href="page-about-gallery.html" class="text-lg font-medium">Gallery</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="overflow-clip [counter-increment:numeric]">
+                            <a href="page-admission.html" class="relative inline-flex gap-4">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">Admission</h1>
+                            </a>
+                        </li>
+                        <li class="accordion-item overflow-clip [counter-increment:numeric]">
+                            <a href="javascript:;" class="relative inline-flex gap-4" data-target="accordion-2">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">Teaching & Learning</h1>
+                            </a>
+                            <div id="accordion-2" class="accordion-content overflow-clip" aria-hidden="true">
+                                <ul class="flex flex-col gap-2 py-4 pl-8">
+                                    <li><a href="page-teaching-academic.html" class="text-lg font-medium">Academic Overview</a></li>
+                                    <li><a href="page-teaching-kindergarten.html" class="text-lg font-medium">Kindergarten</a></li>
+                                    <li><a href="page-teaching-primary-school.html" class="text-lg font-medium">Primary School</a></li>
+                                    <li><a href="page-teaching-junior-school.html" class="text-lg font-medium">Junior School</a></li>
+                                    <li><a href="page-teaching-senior-school.html" class="text-lg font-medium">Senior School</a></li>
+                                    <li><a href="page-teaching-elective.html" class="text-lg font-medium">Elective Class</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="overflow-clip [counter-increment:numeric]">
+                            <a href="page-news-event.html" class="relative inline-flex gap-4">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">News & Event</h1>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-3 shrink-0 mt-auto">
+                    <div class="flex items-center justify-between">
+                        <h6 class="uppercase leading-none tracking-wide text-dark-400">Change Language</h6>
+                        <div class="flex items-center gap-1">
+                            <a href="#!" class="btn btn-icon [&.is-active]:btn-primary is-active">EN</a>
+                            <a href="#!" class="btn btn-icon">ID</a>
+                            <a href="#!" class="btn btn-icon">CN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-3 shrink-0">
+                    <a href="page-contact-us.html" class="w-full btn btn-primary is-active" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="py-3 shrink-0">
+                    <h6 class="uppercase leading-none tracking-wide text-dark-400">Copyright © 2024</h6>
+                    <h6 class="uppercase leading-none tracking-wide text-dark-400">Bintang Mulia School</h6>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<section id="page-header" class="relative pt-[var(--space-header)]">
+    <div class="relative pt-16 pb-8 | lg:pt-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-x-16">
+                <div class="grid-item col-span-full text-center | lg:col-span-10 lg:text-start">
+                    <div class="relative">
+                        <div class="inline-flex items-center gap-3 mb-6 | lg:absolute lg:left-0 lg:top-[clamp(1rem,32/1440*100vw,32/1440*100vw)] lg:mb-0" data-fade-in>
+                            <div class="w-1.5 aspect-square bg-primary-600 rounded-full shrink-0"></div>
+                            <h6 class="uppercase leading-none tracking-wide">Privacy Policy</h6>
+                        </div>
+                        <h2 class="font-title font-medium text-balance leading-none [--fix-size:theme('fontSize.5xl')] [--font-size:128] | lg:[--font-size:92] lg:[&>*:first-child]:pl-40" data-split-text>Privacy Policy<span class="text-primary-600">.</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="absolute inset-x-0 top-0 -bottom-20 bg-[linear-gradient(90deg,theme('colors.dark.950/0.15')_1px,transparent_0),linear-gradient(180deg,theme('colors.dark.950/0.15')_1px,transparent_0)] bg-[length:calc(100vw/8)_calc(100vw/8)] [mask-image:radial-gradient(farthest-corner,black,rgba(0,0,0,.5),transparent_80%)] -z-[1] | lg:bg-[length:calc(100vw/20)_calc(100vw/20)]"></div>
+    </div>
+</section>
+
+<section id="page-content">
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-2 lg:text-end">
+                    <div class="lg:inline-flex lg:sticky lg:top-0 lg:pt-[var(--space-header)] lg:-mt-[var(--space-header)]">
+                        <div class="flex flex-row gap-4 items-center pointer-events-auto justify-between | lg:w-min lg:gap-6 lg:flex-col lg:justify-start">
+                            <h6 class="uppercase leading-none tracking-wide text-dark-400 | lg:[writing-mode:vertical-lr]">Share</h6>
+                            <div class="flex items-center gap-1 | lg:flex-col">
+                                <a href="#!" class="btn btn-icon btn-transparent text-dark-900 [--bg-hover:theme('colors.primary.500')] [--icon-hover:white]" data-hover-effect>
+                                    <svg class="icon icon-fill icon-up !text-xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.55869 10.2083C4.47617 10.2083 4.25024 10.4146 4.25024 11.4028V13.1944C4.25024 14.1826 4.47617 14.3889 5.55869 14.3889H8.17557V21.5556C8.17557 22.5438 8.40149 22.75 9.48401 22.75H12.1009C13.1834 22.75 13.4093 22.5438 13.4093 21.5556V14.3889H16.3477C17.1687 14.3889 17.3803 14.2432 17.6058 13.5226L18.1666 11.7309C18.5529 10.4965 18.3148 10.2083 16.9085 10.2083H13.4093V7.22222C13.4093 6.56255 13.9951 6.02778 14.7178 6.02778H18.4418C19.5243 6.02778 19.7502 5.82154 19.7502 4.83333V2.44444C19.7502 1.45624 19.5243 1.25 18.4418 1.25H14.7178C11.1046 1.25 8.17557 3.92386 8.17557 7.22222V10.2083H5.55869Z" fill="#141B34"/>
+                                    </svg>    
+                                </a>
+                                <a href="#!" class="btn btn-icon btn-transparent text-dark-900 [--bg-hover:theme('colors.primary.500')] [--icon-hover:white]" data-hover-effect>
+                                    <svg class="icon icon-fill icon-up !text-xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.3569 2.78113C2.52359 2.45513 2.85886 2.25 3.225 2.25H8.1C8.41308 2.25 8.70711 2.40034 8.89041 2.65415L13.5354 9.08571L20.0856 2.53557C20.4663 2.15481 21.0837 2.15481 21.4644 2.53557C21.8452 2.91633 21.8452 3.53367 21.4644 3.91443L14.6919 10.687L21.5654 20.2041C21.7798 20.501 21.8098 20.8929 21.6431 21.2189C21.4764 21.5449 21.1411 21.75 20.775 21.75H15.9C15.5869 21.75 15.2929 21.5997 15.1096 21.3459L10.4646 14.9143L3.91443 21.4644C3.53367 21.8452 2.91634 21.8452 2.53557 21.4644C2.15481 21.0837 2.15481 20.4663 2.53557 20.0856L9.30811 13.313L2.43459 3.79585C2.22022 3.49903 2.19021 3.10713 2.3569 2.78113Z" fill="#141B34"/>
+                                    </svg>    
+                                </a>
+                                <a href="#!" class="btn btn-icon btn-transparent text-dark-900 [--bg-hover:theme('colors.primary.500')] [--icon-hover:white]" data-hover-effect>
+                                    <svg class="icon icon-fill icon-up !text-xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.24997C6.06296 1.24997 1.25002 6.06291 1.25002 12C1.25002 13.4809 1.54989 14.8936 2.09293 16.1794C2.23539 16.5167 2.33142 16.7446 2.39557 16.9198C2.46099 17.0984 2.47018 17.1631 2.47134 17.1797C2.47783 17.2736 2.45407 17.4013 2.29192 18.0073L1.2755 21.8061C1.20627 22.0649 1.28029 22.3409 1.46969 22.5303C1.65909 22.7197 1.93512 22.7937 2.19387 22.7245L5.99264 21.7081C6.59867 21.5459 6.72635 21.5222 6.82026 21.5287C6.83692 21.5298 6.90154 21.539 7.08019 21.6044C7.25534 21.6686 7.48326 21.7646 7.82056 21.9071C9.10634 22.4501 10.5191 22.75 12 22.75C17.9371 22.75 22.75 17.937 22.75 12C22.75 6.06291 17.9371 1.24997 12 1.24997ZM8.9729 6.24999L8.88025 6.24989C8.40058 6.24908 7.95809 6.24833 7.52291 6.44711C7.20676 6.59152 6.93775 6.83687 6.74186 7.08193C6.54597 7.32698 6.3659 7.64342 6.29467 7.98363C6.19703 8.44997 6.27755 8.8048 6.36369 9.18438L6.37558 9.23688C6.8101 11.1612 7.82592 13.048 9.38873 14.6108C10.9515 16.1737 12.8384 17.1895 14.7627 17.624L14.8152 17.6359C15.1948 17.722 15.5496 17.8025 16.0159 17.7049C16.3561 17.6337 16.6726 17.4536 16.9176 17.2577C17.1627 17.0618 17.408 16.7928 17.5525 16.4767C17.7512 16.0415 17.7505 15.599 17.7497 15.1193L17.7496 15.0267C17.7496 14.8063 17.7428 14.4352 17.5998 14.0922C17.4291 13.6824 17.0773 13.3447 16.5258 13.2582L16.5201 13.2573L16.5197 13.2573C15.8364 13.1502 15.317 13.0688 14.9496 13.0154C14.7657 12.9887 14.6131 12.9679 14.4937 12.9544C14.3955 12.9432 14.2605 12.9292 14.1475 12.9358C13.6579 12.9645 13.2686 13.163 12.967 13.3697C12.7751 13.5012 12.5665 13.6774 12.4025 13.8159C12.3381 13.8703 12.2805 13.9189 12.2336 13.9567L12.1562 14.019L12.1562 14.019C11.861 14.2567 11.7133 14.3756 11.5313 14.3719C11.3493 14.3681 11.2157 14.2512 10.9486 14.0174C10.7787 13.8687 10.6121 13.7129 10.4494 13.5502C10.2866 13.3874 10.1309 13.2209 9.98214 13.0509C9.74835 12.7839 9.63146 12.6503 9.62771 12.4683C9.62397 12.2862 9.74282 12.1386 9.98054 11.8434L10.0428 11.766C10.0807 11.719 10.1293 11.6615 10.1837 11.5971L10.1837 11.5971C10.3222 11.4331 10.4983 11.2245 10.6299 11.0326C10.8365 10.731 11.0351 10.3416 11.0638 9.85207C11.0704 9.7391 11.0564 9.60404 11.0452 9.50589C11.0316 9.38648 11.0109 9.23384 10.9842 9.04993C10.9308 8.68245 10.8493 8.16297 10.7422 7.47943L10.7413 7.47374C10.6549 6.9223 10.3172 6.5705 9.90741 6.39974C9.5644 6.25679 9.19327 6.24999 8.9729 6.24999Z" fill="#141B34"/>
+                                    </svg>    
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-8 lg:-order-1 lg:col-start-3">
+                    <article class="post-entry">
+                        <h5>1. Personal information we collect.</h5>
+                        <p>In order to register on the Platform and identify yourself, we will request your email. To create your profile on the Platform you may include personal information such as your country or city of residence, a photograph, first and last names, education, work experience, and any other additional information you might want to share in your profile. The profile information helps you make the most out of our Services, like helping other professionals find you and finding business opportunities or projects you might be interested in. However, if you do not want this information to be published, you may leave the profile information fields blank or delete the information already provided.</p>
+                        <p>When you visit or use our Services, We register data such as frequency of use, date and time Services were accessed, when you see or click a specific content, your content preferences. We use information when you log in, when you read our emails, and Internet protocol ("IP") addresses to identify you and register your use in the Platform.</p>
+                        <p>We do not make decisions based on profiles, beyond personalization of advertisement and for the purpose of the legitimate prevention of Internet fraud.</p>
+                        <p>We obtain information through other platforms, for example, when you register via Facebook or similar technologies. This might include personal texts or images available in an external website.</p>
+                        <h5>2. Purpose.</h5>
+                        <p>Awwwards Online SL as the Party Responsible of Data Handling, will handle your personal data for the following purposes:</p>
+                        <ul>
+                            <li>Manage your registration as Platform user, to identify you and give you access to Services available for registered Platform users.</li>
+                            <li>Contacting you through email regarding updates or information related to features, products or services and updates, as long as they are needed or reasonable.</li>
+                            <li>Respond to any request or inquiry you make through the customer service channels available at our Platform.</li>
+                            <li>We also use your information to generate aggregated non-identifying data. For instance, generate statistics regarding our users, their jobs or areas of expertise, number of impressions or clicks in a specific project or visitor demographics.</li>
+                        </ul>
+                        <h5>3. Use of your credit card.</h5>
+                        <p>You may have to provide a credit card to buy products and services from our website. We use third-party billing services and have no control over these services. We use our commercially reasonable efforts to make sure your credit card number is kept strictly confidential by using only third-party billing services that use industry-standard encryption technology to protect your credit card number from unauthorized use. However, you understand and agree that we are in no way responsible for any misuse of your credit card number.</p>
+                        <p>If you are paying with PayPal, we will request the email associated to it. If you request an invoice, we will request your invoicing data, if needed.</p>
+                        <p>We don’t save your details, but you will be able to modify or delete your credit cards or PayPal account at any time through the payment method in the purchase form or through the payment method setting in your profile.</p>
+                        <p>For security reasons, the use of this feature might require changing of your password. Remember, the safety of the Platform also depends on the correct use and storage of confidential passwords.</p>
+                        <h5>4. Options</h5>
+                        <p>The provision of AWWWARDS ONLINE SL. Service might entail the use of your personal data, with your express consent, to make available to you personalized advertisement related to our products and services, through emails or other electronic communication means from us or third party collaborators. With the goal of improving our services, please know that personal information regarding your purchases, interests and preferences might be used by AWWWARDS ONLINE SL for the purpose of analysis, user profiling, marketing studies, quality surveys, and improving interaction with our clients.</p>
+                        <p>If you do not want to receive certain type of email communications, simply access the Settings section in your User Profile to manage your preferences.</p>
+                        <p>Likewise, you will be able to cancel your notifications by following the instructions in each communication you receive.</p>
+                        <h5>5. Data retention period.</h5>
+                        <p>We will retain your personal data for as long as we have a valid contractual relationship, and after that, for the period determined by any obligations arising from the treatment of the data or as established by law.</p>
+                        <h5>6. Who obtains your data.</h5>
+                        <p>To comply with the purposes indicated in this Privacy Policy, it might be necessary to report or release your personal data to third parties for the following reasons:</p>
+                        <ul>
+                            <li><b>Business Transfers:</b> regarding any reorganization, restructuring, merge or sale, or any other transfer of assets, including personal, provided that the receiving party accepts to handle your personal information in accordance with our Privacy Policy.</li>
+                            <li><b>Service Providers:</b> to render services in our name or to help us provide our services. For example, we contract service providers to render marketing, advertising, communication, infrastructure and IT services, to customize and improve our service, to process credit card transactions or other methods of payment, provide customer service, collect debts, analyze and improve data (such as data regarding user interaction with our services), and process and manage satisfaction surveys. For efficiency purposes, these partners and providers may be based in the US or other countries or territories outside of the European Economic Area, and might not provide a data protection level comparable to that of your country, or the European Union's.</li>
+                        </ul>
+                        <p>When you accept this Privacy Policy, you are specifically authorizing us to handle and report your personal data to the partners mentioned and/or release your personal data to the service providers responsible for data handling, who are outside of the European Economic Area for the purposes described herein and to provide you complete service. When we release personal information when exchanging data with countries outside the European Economic Area and other areas with data protection laws, we will ensure the information is being transferred in compliance with this Privacy Policy and pursuant to current data protection laws.</p>
+                        <h5>7. Data Protection Rights.</h5>
+                        <p>As the Party Responsible for Data Handling, we are committed to respecting the confidential nature of your personal data and guaranteeing the full exercise of these rights. At all times, you will have the following rights:</p>
+                        <ul>
+                            <li><b>Right to access.</b> You have the right to confirm whether we are handling your personal data and, if we are, you have the right to obtain a copy of such data and information regarding the handling.</li>
+                            <li><b>Right to amend.</b> You have the right to correct errors, modify incomplete or wrong data and guarantee the authenticity of the information that is being handled.</li>
+                            <li><b>Right to delete.</b> You have the right to request the deletion of your data without undue delay, if it were being handled wrongfully or if the end to which it was handled or collected has ceased to exist.</li>
+                            <li><b>Right to limitation of handling.</b> You have the right to request that the suspension of the handling of your information if it is illegal or the accuracy of the data has been contested.</li>
+                            <li><b>Right to oppose.</b> You have the right to oppose to the handling of your data when it has been used for purposes of direct marketing or when the handling must be terminated due to a personal situation, except when there is legitimate interest or it is necessary for the exercise or defense of claims.</li>
+                            <li><b>Right not to be subjected to personalized decisions.</b> You have the right of not being subjected to a decision based solely on the automatic handling of your data, including profiling, with binding legal effects or which affects you, except when necessary for the execution of an agreement, as permitted by the law or if you have expressly authorized it.</li>
+                        </ul>
+                        <p>In order to exercise these rights, please send an email to: awwwards@awwwards.com indicating your (i) identity, by sharing your full name and email address used to register or make a purchase, an ID to establish your identity, and (ii) the right or rights you're exercising.</p>
+                        <p>You may also visit the agency overseeing the protection of data in your country to file a claim or request the protection of your rights, if deemed necessary.</p>
+                        <p>The exercise of such rights is free, except when requests are deliberately unfounded or excessive, in which case the individual will be required to bear the processing costs.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</main>
+
+<footer id="section-footer" class="px-1.5 pb-1.5 | lg:px-3 lg:pb-3">
+    <section id="footer-register" class="relative pb-16 pt-8 | lg:pb-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="relative | lg:pt-24">
+                <div class="relative isolate bg-warning-500 rounded-3xl overflow-clip px-8 py-12 | lg:px-16 lg:py-20 | 2xl:px-20 2xl:py-28">
+                    <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                        <div class="grid-item col-span-full text-center | lg:col-span-8 lg:text-start">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-950 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide text-white">Be a part of our lifelong</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none text-white after:content-['.'] after:text-primary-950">Transformative Learning Community Today</h2>
+                        </div>
+                        <div class="grid-item col-span-full text-center | lg:col-span-6 lg:row-start-2 lg:text-start">
+                            <a href="page-online-registration.html" class="btn btn-dark" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 -z-[1]">
+                        <div class="absolute bottom-0 right-0 aspect-square rounded-full border border-white/50 w-[calc(22rem+22vw)] translate-x-1/4 translate-y-1/2"></div>
+                        <div class="absolute top-0 left-0 aspect-square rounded-full bg-warning-400/50 w-[calc(20rem+20vw)] -translate-x-1/2 -translate-y-1/2"></div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 left-[60%] pointer-events-none hidden | lg:block">
+                    <figure class="size-full">
+                        <img src="./assets/images/online-registration.webp" alt="" class="size-full object-contain">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-1/2 bottom-0 bg-primary-950 rounded-t-3xl -z-[1]"></div>
+    </section>
+    <section id="footer-top" class="pb-20 pt-8 bg-primary-950 | lg:pb-24">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-16 | lg:grid-cols-12">
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <a href="./" class="inline-flex items-center gap-3">
+                        <img src="./assets/images/logo/logo-icon-trimulia-default.svg" alt="" class="size-10 object-contain shrink-0">
+                        <div class="inline-flex flex-col">
+                            <h5 class="font-title text-xs tracking-normal !leading-none font-medium uppercase text-white">Sekolah Kristen</h5>
+                            <h5 class="font-title text-xl tracking-normal !leading-none font-medium uppercase text-white | lg:text-2xl">Trimulia</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <!-- <h5 class="font-title font-medium text-balance text-white after:content-['.'] after:text-primary-600 mb-4">About Us</h5> -->
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">About Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-our-network.html">Our Network</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-structure.html">Structure Organization</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-news-event.html">News & Event</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Teaching & Learning</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-academic.html">Academic Overview</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-kindergarten.html">Kindergarten</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-primary-school.html">Primary School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-junior-school.html">Junior School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-senior-school.html">Senior School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-teaching-elective.html">Elective Class</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Head Office</h6>
+                    <address class="not-italic text-white/60 text-balance mb-4">
+                        Jalan Mentawai No. 201 Taman Imam Bonjol, Lippo Village Tangerang, 15139, Indonesia
+                    </address>
+                    <a class="link text-white" href="#!">Get Directions</a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Contact Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">info@bintangmulia.com</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">+62 822 1234 5678</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-warning-500 mb-4 pb-4 border-b border-white/10">Follow Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Facebook</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Instagram</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer-bottom" class="pb-8 bg-primary-950 rounded-b-3xl overflow-clip">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="splide group/slide pointer-events-none mb-8 | lg:mb-16" data-slide-footer>
+                <div class="splide__track overflow-visible">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-warning-500 | lg:[--font-size:86] whitespace-nowrap">Sekolah Kristen Trimulia</h1>
+                        </div>
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-warning-500 | lg:[--font-size:86] whitespace-nowrap">Sekolah Kristen Trimulia</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6 id="footer-copyright" class="uppercase leading-none tracking-wide text-white/60 text-center">Copyright © 2024 Trimulia. All Rights Reserved</h6>
+        </div>
+    </section>
+</footer>
+
+<!-- <div id="modal-adds" class="fixed top-0 inset-x-0 z-[999] hidden" data-modal data-auto-modal>
+    <div class="relative w-full h-dvh flex flex-col overflow-auto pointer-events-none" data-lenis-prevent>
+        <div class="py-12 shrink-0 my-auto">
+            <div class="max-w-screen-2xl mx-auto px-2 lg:px-8 xl:px-8 2xl:px-0">
+                <figure class="relative rounded-lg overflow-clip pointer-events-auto max-w-screen-sm mx-auto" data-modal-content>
+                    <div class="absolute top-0 right-0 p-1">
+                        <button type="button" class="btn btn-icon btn-sm btn-dark" data-hover-effect data-modal-hide>
+                            <svg class="icon icon-stroke" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.0002 4.99994L5.00021 18.9999M5.00021 4.99994L19.0002 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="#!">
+                        <img src="./assets/images/thumbnails/announcement.webp" loading="eager" alt="" class="w-full object-cover">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="floating-btn" class="fixed bottom-0 right-0 z-40 p-1.5 | lg:p-6">
+    <a href="https://psb.bintangmulia.sch.id/" target="_blank" class="btn btn-icon btn-lg btn-warning" data-hover-effect>
+        <svg class="icon icon-fill icon-up !text-3xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.4" d="M20.5 8.75C20.9142 8.75 21.25 9.08579 21.25 9.5V16.3564C21.3341 16.5459 21.4438 16.7511 21.5773 17.0011L21.5774 17.0011C21.6659 17.1667 21.7648 17.3519 21.8739 17.5653C22.1618 18.1288 22.4728 18.8095 22.6583 19.5901C22.7817 20.1094 22.8557 20.7964 22.3665 21.287C22.1374 21.5168 21.8549 21.6247 21.6061 21.6799C21.3581 21.7349 21.086 21.75 20.8155 21.75H20.1846C19.914 21.75 19.6419 21.7349 19.3939 21.6799C19.1451 21.6247 18.8626 21.5168 18.6335 21.287C18.1443 20.7964 18.2184 20.1094 18.3417 19.5901C18.5272 18.8095 18.8382 18.1288 19.1262 17.5653C19.2352 17.352 19.3341 17.1667 19.4226 17.0012L19.4227 17.0011L19.4227 17.001C19.5563 16.7511 19.6659 16.5459 19.75 16.3564V9.5C19.75 9.08579 20.0858 8.75 20.5 8.75Z" fill="#141B34"/>
+            <path opacity="0.4" d="M15.1144 14.5285C14.5599 14.7251 14.0193 14.8963 13.5298 15.021C13.0795 15.1357 12.5257 15.2504 12.0009 15.2504C11.4761 15.2504 10.9223 15.1357 10.472 15.021C9.98249 14.8963 9.44193 14.7251 8.88747 14.5285C8.01475 14.219 7.04728 13.8249 6.09414 13.3936C5.75043 13.238 5.35907 13.4974 5.3755 13.8743L5.49708 16.663C5.50321 16.8036 5.51961 16.9872 5.5784 17.1813C5.71567 17.6345 5.98296 18.0933 6.43112 18.4145C7.10092 18.8944 7.98982 19.2227 8.93433 19.4335C9.88858 19.6465 10.9493 19.7504 12.0009 19.7504C13.0525 19.7504 14.1133 19.6465 15.0675 19.4335C16.012 19.2227 16.9009 18.8944 17.5707 18.4145C18.0189 18.0933 18.2862 17.6345 18.4234 17.1813C18.4822 16.9872 18.4986 16.8036 18.5048 16.663L18.6263 13.8743C18.6428 13.4974 18.2514 13.238 17.9077 13.3936C16.9546 13.8249 15.9871 14.219 15.1144 14.5285Z" fill="#141B34"/>
+            <path d="M10.8414 2.43303C11.2599 2.32641 11.6671 2.25 12 2.25C12.3329 2.25 12.7401 2.32641 13.1586 2.43303C13.5904 2.54303 14.0852 2.69885 14.6121 2.88569C15.6665 3.25958 16.8817 3.76934 18.0337 4.32021C19.1824 4.86949 20.2909 5.47047 21.1227 6.03058C21.5359 6.30877 21.9063 6.59377 22.1819 6.87321C22.3198 7.01303 22.4517 7.16908 22.5529 7.33906C22.6512 7.50418 22.75 7.73169 22.75 8C22.75 8.26832 22.6512 8.49582 22.5529 8.66094C22.4517 8.83092 22.3198 8.98697 22.1819 9.12679C21.9063 9.40623 21.5359 9.69123 21.1227 9.96942C20.2909 10.5295 19.1824 11.1305 18.0337 11.6798C16.8817 12.2307 15.6665 12.7404 14.6121 13.1143C14.0852 13.3012 13.5904 13.457 13.1586 13.567C12.7401 13.6736 12.3329 13.75 12 13.75C11.6671 13.75 11.2599 13.6736 10.8414 13.567C10.4096 13.457 9.91478 13.3012 9.38788 13.1143C8.33348 12.7404 7.11825 12.2307 5.96626 11.6798C4.81761 11.1305 3.70909 10.5295 2.87728 9.96942C2.46413 9.69123 2.09374 9.40623 1.81808 9.12679C1.68016 8.98697 1.54826 8.83092 1.44706 8.66094C1.34876 8.49582 1.25 8.26832 1.25 8C1.25 7.73169 1.34876 7.50418 1.44706 7.33906C1.54826 7.16908 1.68016 7.01303 1.81808 6.87321C2.09374 6.59377 2.46413 6.30877 2.87728 6.03058C3.70909 5.47047 4.81761 4.86949 5.96626 4.32021C7.11825 3.76934 8.33348 3.25958 9.38788 2.88569C9.91478 2.69885 10.4096 2.54303 10.8414 2.43303Z" fill="#141B34"/>
+        </svg>
+    </a>
+</div>
+
+<div id="preloader"></div>
+
+</div><!--app-->
+
+
+</body>
+</html>
