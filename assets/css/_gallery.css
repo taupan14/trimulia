@@ -1,0 +1,155 @@
+.lg-inner,
+.lg-slide,
+.lg-components,
+.lg-item {
+    @apply
+    ease-custom
+    duration-500
+}
+
+.lg-backdrop {
+    @apply
+    bg-dark-900/90
+    backdrop-blur
+    !ease-custom
+    !duration-500
+}
+.lg-outer {
+    .lg-img-wrap {
+        @apply
+        py-4
+    }
+
+    .lg-video-cont {
+        @apply
+        rounded-3xl
+        overflow-clip;
+
+        .lg-object {
+            @apply
+            object-cover
+            object-center
+        }
+    }
+
+    .lg-thumb-outer {
+        @apply
+        bg-transparent
+    }
+
+    .lg-thumb {
+        @apply
+        py-4
+    }
+}
+.lg-image {
+    @apply
+    rounded-3xl
+}
+.lg-sub-html {
+    @apply
+    font-sans
+    px-0
+    py-4
+    !ease-custom
+
+    [&_a]:!no-underline
+}
+.lg-toolbar {
+    @apply
+    absolute
+    top-0
+    inset-x-0
+    flex
+    items-center
+    p-4
+    gap-1
+}
+
+.lg-toolbar .lg-icon,
+.lg-icon {
+    @apply
+    p-0
+    w-8
+    h-8
+    flex
+    items-center
+    justify-center
+    rounded-full
+    text-xs
+    !font-['Font_Awesome_6_Pro']
+    font-light
+    opacity-100
+    text-white
+
+    !bg-dark-900/50
+    transition-[color,background-color]
+    duration-500
+    ease-custom
+    hover:!bg-dark-900
+    hover:text-white
+
+    before:!hidden
+    after:!hidden
+}
+
+.lg-toolbar {
+    .lg-counter {
+        @apply
+        order-first
+        font-sans
+        text-[11px]
+        uppercase
+        tracking-wide
+        font-semibold
+        leading-4
+        !h-auto
+        py-2
+        px-4
+        rounded-full
+        bg-white
+        text-dark-900
+        mr-auto
+    }
+}
+
+.lg-content {
+    @apply
+    !top-0
+}
+
+.lg-close {
+    @apply
+    order-last
+    after:!content-['\f40e']
+}
+.lg-zoom {
+    @apply
+    after:!content-['asd']
+}
+.lg-download {
+    @apply
+    after:!content-['\f33d']
+}
+
+.lg-next,
+.lg-prev {
+    @apply
+    top-1/2
+    -translate-y-1/2
+    m-0
+}
+.lg-next {
+    @apply
+    right-4
+    before:content-['\f138']
+}
+.lg-prev {
+    @apply
+    left-4
+    after:content-['\f137']
+}
+.lg-video-loading .lg-video-play-icon-circle {
+    @apply
+    stroke-primary-700
+}

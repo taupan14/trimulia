@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "Suisse Intl";
+    font-style: normal;
+    font-weight: 700;
+    src: url("SuisseIntl-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Suisse Intl";
+    font-style: normal;
+    font-weight: 400;
+    src: url("SuisseIntl-Book.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Suisse Intl";
+    font-style: normal;
+    font-weight: 500;
+    src: url("SuisseIntl-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Suisse Intl";
+    font-style: normal;
+    font-weight: 600;
+    src: url("SuisseIntl-SemiBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Suisse Neue";
+    font-style: normal;
+    font-weight: 500;
+    src: url("SuisseNeue-Medium.woff2") format("woff2");
+}
+/* @font-face {
+    font-family: "Blacker Pro Text";
+    font-style: normal;
+    font-weight: 700;
+    src: url("Blacker-Pro-Text-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Blacker Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    src: url("Blacker-Pro-Text-Book.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Blacker Pro Text";
+    font-style: normal;
+    font-weight: 500;
+    src: url("Blacker-Pro-Text-Medium.woff2") format("woff2");
+} */

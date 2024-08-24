@@ -1,0 +1,25 @@
+@layer components {
+    .odometer {
+        &.odometer-auto-theme,
+        &.odometer-theme-default {
+            @apply
+            font-sans
+            leading-none
+            font-semibold;
+            .odometer-digit {
+                .odometer-digit-inner {
+                    @apply
+                    overflow-x-visible
+                    overflow-y-clip
+                }
+
+                /* .odometer-digit-spacer {
+                    @apply
+                    align-baseline
+                    w-fit
+                    flex
+                } */
+            }
+        }
+    }
+}

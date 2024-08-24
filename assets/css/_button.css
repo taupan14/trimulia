@@ -1,0 +1,263 @@
+@layer components {
+    .btn {
+        --circle-size: theme('size.9');
+
+        @apply
+        relative
+        isolate
+        shrink-0
+        inline-flex
+        items-center
+        justify-center
+        py-3.5
+        px-6
+        text-xs
+        leading-5
+        font-semibold
+        tracking-wide
+        uppercase
+        bg-dark-200
+        rounded-full
+        backdrop-blur
+        transition-colors
+        duration-700
+        ease-custom
+
+        before:absolute
+        before:inset-0
+        before:size-0
+        before:m-auto
+        before:bg-[var(--bg-hover,transparent)]
+        before:rounded-full
+        before:-z-[1]
+        before:transition-all
+        before:duration-700
+        before:ease-custom
+
+        hover:before:size-full
+        hover:before:scale-100;
+
+        &:has(.btn-circle) {
+            &:has(.circle-right) {
+                @apply
+                pr-[calc(var(--circle-size)+theme('size.6'))]
+            }
+            &:has(.circle-left) {
+                @apply
+                pl-[calc(var(--circle-size)+theme('size.6'))]
+            }
+            &.w-full {
+                @apply
+                !px-[calc(var(--circle-size)+theme('size.6'))]
+            }
+        }
+
+        &.btn-sm {
+            @apply
+            py-2
+            px-5
+        }
+
+        .btn-circle {
+            @apply
+            absolute
+            inset-y-0
+            my-auto
+            [clip-path:circle(3px_at_50%_50%)];
+    
+            &:has(.circle-left) {
+                @apply
+                left-1.5
+            }
+            &:has(.circle-right) {
+                @apply
+                right-1.5
+            }
+        }
+
+        .icon {
+            @apply
+            text-base
+        }
+
+        &[disabled] {
+            @apply
+            pointer-events-none
+            cursor-not-allowed
+        }
+    }
+
+    .btn-circle {
+        @apply
+        shrink-0
+        !p-0
+        w-[var(--circle-size,theme('size.11'))]
+        h-[var(--circle-size,theme('size.11'))]
+        inline-flex
+        items-center
+        justify-center
+        rounded-full
+        text-[var(--text-circle,white)]
+        bg-[var(--bg-circle,theme('colors.primary.950'))]
+        [clip-path:circle(0_at_50%_50%)]
+        transition-[clip-path]
+        duration-700
+        ease-custom;
+
+        &.btn-lg {
+            --circle-size: theme('size.16');
+            @apply
+            text-2xl
+        }
+
+        &.btn-xl {
+            --circle-size: theme('size.24');
+            @apply
+            text-3xl
+        }
+
+        .circle-icon {
+            @apply
+            transition-transform
+            duration-700
+            ease-custom
+            !drop-shadow-none;
+
+            &.icon-right {
+                @apply
+                -translate-x-[2em]
+            }
+            &.icon-left {
+                @apply
+                translate-x-[2em]
+            }
+            &.icon-up-right {
+                @apply
+                -translate-x-[2em]
+                translate-y-[2em]
+            }
+            &.icon-down {
+                @apply
+                -translate-y-[2em]
+            }
+        }
+
+        .is-active > &,
+        :hover > & {
+            @apply
+            [clip-path:circle(50%_at_50%_50%)];
+
+            .circle-icon {
+                @apply
+                !translate-x-0
+                !translate-y-0
+            }
+        }
+    }
+
+    .btn-icon {
+        @apply
+        !p-0
+        w-12
+        h-12;
+        .icon {
+            @apply
+            text-base;
+        }
+
+        &.btn-sm {
+            @apply
+            w-9
+            h-9;
+            .icon {
+                @apply
+                text-lg;
+            }
+        }
+
+        &.btn-lg {
+            @apply
+            w-16
+            h-16;
+            .icon {
+                @apply
+                text-2xl
+            }
+        }
+
+        &.btn-xl {
+            @apply
+            w-24
+            h-24;
+            .icon {
+                @apply
+                text-3xl
+            }
+        }
+    }
+
+    .btn-transparent {
+        @apply
+        bg-transparent
+    }
+
+    .btn-white {
+        @apply
+        bg-white
+        text-dark-900;
+
+        &.btn-transparent {
+            --bg-hover: white;
+            @apply
+            bg-transparent
+            text-white
+            hover:text-dark-900
+        }
+    }
+
+    .btn-dark {
+        --bg-circle: theme('colors.primary.600');
+
+        @apply
+        bg-primary-950
+        text-white
+    }
+
+    .btn-primary {
+        @apply
+        bg-primary-600
+        text-white
+    }
+    
+    .btn-primary-light {
+        --bg-circle: theme('colors.primary.600');
+
+        @apply
+        bg-primary-100
+        text-primary-600
+    }
+
+    .btn-warning {
+        --bg-circle: theme('colors.dark.900');
+
+        @apply
+        bg-warning-500
+        text-white
+    }
+
+
+    .group {
+        &:hover {
+            .btn-circle {
+                @apply
+                [clip-path:circle(50%_at_50%_50%)];
+    
+                .circle-icon {
+                    @apply
+                    !translate-x-0
+                    !translate-y-0
+                }
+            }
+        }
+    }
+}
